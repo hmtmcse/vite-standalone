@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="assets/react.production.min.js" crossorigin></script>
+    <script src="assets/react-dom.production.min.js" crossorigin></script>
+    <script src="assets/babel.min.js"></script>
+  </head>
+  <body>
+
+    <div id="root"></div>
+
+<script type="text/babel">
+  function Recipe({ drinkers }) {
+  return (
+    <ol>
+      <li>Boil {drinkers} cups of water.</li>
+      <li>Add {drinkers} spoons of tea and {0.5 * drinkers} spoons of spice.</li>
+      <li>Add {0.5 * drinkers} cups of milk to boil and sugar to taste.</li>
+    </ol>
+  );
+}
+
+function App() {
+  return (
+    <section>
+      <h1>Spiced Chai Recipe</h1>
+      <h2>For two</h2>
+      <Recipe drinkers={2} />
+      <h2>For a gathering</h2>
+      <Recipe drinkers={4} />
+    </section>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+ <App />
+);
+</script>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 20px;
+  padding: 0;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 22px;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+h3 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+h4 {
+  margin-top: 0;
+  font-size: 16px;
+}
+
+h5 {
+  margin-top: 0;
+  font-size: 14px;
+}
+
+h6 {
+  margin-top: 0;
+  font-size: 12px;
+}
+
+code {
+  font-size: 1.2em;
+}
+
+ul {
+  padding-inline-start: 20px;
+}
+
+button { margin-right: 10px; }
+
+</style>
+
+  </body>
+</html>
